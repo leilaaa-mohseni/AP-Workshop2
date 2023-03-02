@@ -1,14 +1,16 @@
 public class Student {
+    // fields
     private String firstName;
     private String lastName;
     private  String id ;
     private double grade;
+    //constructor
     public Student(String firstName, String lastName,String id)
     {
         this.firstName=firstName;
         this.lastName=lastName;
         this.id=id;
-        grade=0;
+       grade=0;
     }
     public String getFirstName() {
         return firstName;
@@ -22,7 +24,6 @@ public class Student {
     public double getGrade() {
         return grade;
     }
-
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
@@ -30,7 +31,7 @@ public class Student {
         this.lastName = lastName;
     }
     public void setId(String id) {
-    if(id.length()!=7)
+    if(id.length()!=7)// because the maximum of id length is 7
     {
         System.out.println("your id is not true");
     }
@@ -39,7 +40,8 @@ public class Student {
     }
     public void setGrade(double grade)
     {
-        if(grade<0 || grade>20)
+
+        if(grade<0 || grade>20) //because the range of grade is from 0 to 20
         {
             System.out.println(" your grade is not true");
         }
